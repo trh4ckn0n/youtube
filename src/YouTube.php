@@ -296,6 +296,39 @@ class YouTube{
 		$r = [];
 		$j = json_decode($d, true);
 		$combined = $video = $audio = [];
+		if(isset($j['streamingData']['formats'])){
+			foreach($j['streamingData']['formats'] as $s){
+				if(strpos($s['mimeType'], 'audio') === 0){
+					$index = [];
+					$index['bitrate'] = (int) $s['bitrate'];
+					$index['quality'] = $s['quality'];
+					$index['size'] = (int) $s['contentLength'];
+					$index['mimeType'] = $s['mimeType'];
+					$index['url'] = $s['url'];
+					$audio[] = $index;
+				}else if(strpos($s['mimeType'], 'video') === 0 && empty($s['audioQuality'])){
+					$index = [];
+					$index['height'] = (int) $s['height'];
+					$index['width'] = (int) $s['width'];
+					$index['bitrate'] = (int) $s['bitrate'];
+					$index['quality'] = $s['quality'];
+					$index['size'] = (int) $s['contentLength'];
+					$index['mimeType'] = $s['mimeType'];
+					$index['url'] = $s['url'];
+					$video[] = $index;
+				}else{
+					$index = [];
+					$index['height'] = (int) $s['height'];
+					$index['width'] = (int) $s['width'];
+					$index['bitrate'] = (int) $s['bitrate'];
+					$index['quality'] = $s['quality'];
+					$index['size'] = (int) $s['contentLength'];
+					$index['mimeType'] = $s['mimeType'];
+					$index['url'] = $s['url'];
+					$combined[] = $index;
+				}
+			}
+		}
 		if(isset($j['streamingData']['adaptiveFormats'])){
 			foreach($j['streamingData']['adaptiveFormats'] as $s){
 				if(strpos($s['mimeType'], 'audio') === 0){
