@@ -37,7 +37,7 @@ $id = $youtube->extractVideoId('https://youtube.com/watch?v=XzaMwgglY');
 #### Extract Video Info
 ```php
 $info = $youtube->extractVideoInfo($id);
-//or user android client.
+//or custom client.
 $info = $youtube->extractVideoInfo($id, 'android');
 ```
 Default Client: `ios`. More clients: `ios`, `android` (broken or link expires in 30s), `android_vr`
