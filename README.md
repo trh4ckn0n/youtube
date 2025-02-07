@@ -9,6 +9,9 @@ Downloading copyrighted material without permission is against [YouTube's terms 
 By using this program, you are solely responsible for any copyright violations. 
 We are not responsible for people who attempt to use this program in any way that breaks YouTube's terms of services.
 
+## Author
+- [@Samiul Alim](https://t.me/samiulalim1230)
+
 ### Installation
 ```php
 include 'src/YouTube.php';
