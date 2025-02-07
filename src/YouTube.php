@@ -300,31 +300,31 @@ class YouTube{
 			foreach($j['streamingData']['formats'] as $s){
 				if(strpos($s['mimeType'], 'audio') === 0){
 					$index = [];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['bitrate'] = isset($s['bitrate']) ? (int) $s['bitrate'] : null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$audio[] = $index;
 				}else if(strpos($s['mimeType'], 'video') === 0 && empty($s['audioQuality'])){
 					$index = [];
-					$index['height'] = (int) $s['height'];
-					$index['width'] = (int) $s['width'];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['height'] = (int) $s['height'] ?? null;
+					$index['width'] = (int) $s['width'] ?? null;
+					$index['bitrate'] = (int) $s['bitrate'] ?? null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$video[] = $index;
 				}else{
 					$index = [];
-					$index['height'] = (int) $s['height'];
-					$index['width'] = (int) $s['width'];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['height'] = (int) $s['height'] ?? null;
+					$index['width'] = (int) $s['width'] ?? null;
+					$index['bitrate'] = (int) $s['bitrate'] ?? null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$combined[] = $index;
 				}
 			}
@@ -333,31 +333,31 @@ class YouTube{
 			foreach($j['streamingData']['adaptiveFormats'] as $s){
 				if(strpos($s['mimeType'], 'audio') === 0){
 					$index = [];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['bitrate'] = isset($s['bitrate']) ? (int) $s['bitrate'] : null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$audio[] = $index;
 				}else if(strpos($s['mimeType'], 'video') === 0 && empty($s['audioQuality'])){
 					$index = [];
-					$index['height'] = (int) $s['height'];
-					$index['width'] = (int) $s['width'];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['height'] = (int) $s['height'] ?? null;
+					$index['width'] = (int) $s['width'] ?? null;
+					$index['bitrate'] = (int) $s['bitrate'] ?? null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$video[] = $index;
 				}else{
 					$index = [];
-					$index['height'] = (int) $s['height'];
-					$index['width'] = (int) $s['width'];
-					$index['bitrate'] = (int) $s['bitrate'];
-					$index['quality'] = $s['quality'];
-					$index['size'] = (int) $s['contentLength'];
-					$index['mimeType'] = $s['mimeType'];
-					$index['url'] = $s['url'];
+					$index['height'] = (int) $s['height'] ?? null;
+					$index['width'] = (int) $s['width'] ?? null;
+					$index['bitrate'] = (int) $s['bitrate'] ?? null;
+					$index['quality'] = $s['quality'] ?? null;
+					$index['size'] = isset($s['contentLength']) ? (int) $s['contentLength'] : null;
+					$index['mimeType'] = $s['mimeType'] ?? null;
+					$index['url'] = $s['url'] ?? null;
 					$combined[] = $index;
 				}
 			}
