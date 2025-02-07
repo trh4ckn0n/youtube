@@ -1,13 +1,6 @@
 ## Youtube PHP Library
 
-This project was inspired by a very popular youtube-dl python package:  
-https://github.com/ytdl-org/youtube-dl
-
-Yes, there are multiple other PHP-based youtube downloaders on the Internet, 
-but most of them haven't been updated in years, or they depend on youtube-dl itself.  
-
-Pure PHP-based youtube downloaders that work, and are **kept-up-to date** just do not exist.
-This script uses no Javascript interpreters, no calls to shell... nothing but pure PHP with no heavy dependencies either.
+📺 PHP based program to download/stream videos from YouTube. Active and frequently updated! ⭐
 
 ## :warning: Legal Disclaimer
 
